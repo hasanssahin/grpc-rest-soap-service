@@ -1,0 +1,14 @@
+syntax="proto3";
+
+service UserService{
+    rpc createNewUser(UserReq) returns(UserRes){}
+}
+
+message UserReq{
+    string name=1;
+    string surname=2;
+}
+
+message UserRes{
+    bool result=1;
+}
