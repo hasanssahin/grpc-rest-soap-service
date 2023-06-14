@@ -13,12 +13,12 @@ app.post('/users', async (req, res) => {
 	if(user){
 		const result = await user.save()
 		if(!result){
-			res.json({message:"Error"})
+			res.json({result:false})
 		}else{
-			res.json({user:user})
+			res.json({result:true})
 		}
 	}else{
-		res.json("HATA")
+		res.json("Error")
 	}
 })
 
